@@ -25,11 +25,11 @@ jobs:
       run: java Add.java
     - name: Print 
       run: echo "Java file ran successfully"
-    - name: upload-artifact
-      uses: actions/upload-artifact@v4
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1.1.2
       with:
            name: ArtifactName
-           path: ${{ github.workplace }}/*  
+           path: ${{ github.workspace }}/*  
   DeployToDev:
      runs-on: windows-latest
      needs: build
