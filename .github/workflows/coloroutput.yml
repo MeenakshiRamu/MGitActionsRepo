@@ -13,6 +13,8 @@ jobs:
       run: echo "SELECTED_COLOR=Green" >> $GITHUB_OUTPUT
     - name: Print color in output
       run: echo "The select color is ${{ steps.color-selector.outputs.SELECTED_COLOR }}" >> $GITHUB_STEP_SUMMARY
+    - name: Clone repo
+      uses: actions/checkout@v2
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
