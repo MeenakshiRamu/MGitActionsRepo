@@ -38,7 +38,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-           name: ArtifactNameDownloaded
+           name: ArtifactName
 
   DeployToUAT:
      runs-on: windows-latest
@@ -48,4 +48,4 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-           name: ArtifactNameDownloadUAT
+           name: ArtifactName
