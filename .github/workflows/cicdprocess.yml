@@ -21,8 +21,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Build with Ant
-      run: java add.java
+    - name: Run Java file
+      run: java Add.java
   DeployToDev:
      runs-on: windows-latest
      needs: build
