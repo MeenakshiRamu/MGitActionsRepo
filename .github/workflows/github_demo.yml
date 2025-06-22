@@ -14,6 +14,6 @@ jobs:
     - run: echo "The ${{ github.repository }} has been cloned in the runner machine"
     - name: List the files in Workflow
       run: |
-       ls ${{ github.repository }}
+       ls ${{ github.workspace }}
     - run: echo "The job status is ${{ job.status }} 
  
