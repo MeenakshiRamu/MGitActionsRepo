@@ -13,6 +13,7 @@ jobs:
       uses: actions/checkout@v4
     - run: echo "The ${{ github.repository }} has been cloned in the runner machine"
     - name: List the files in Workflow
-      run: ls ${{ github.repository }}
+      run: |
+       ls ${{ github.repository }}
     - run: echo "The job status is ${{ job.status }} 
  
