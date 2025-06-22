@@ -4,6 +4,7 @@ class Add {
     int c=a+b;
     System.out.println("The output of addition  is:"+c);
     System.out.println("GOD IS GREAT");  
+    //Adding a comment
   }
 } 
   
