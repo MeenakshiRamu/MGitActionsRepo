@@ -14,7 +14,7 @@ jobs:
     - name: Print color in output
       run: echo "The select color is ${{ steps.color-selector.outputs.SELECTED_COLOR }}" >> $GITHUB_STEP_SUMMARY
     - name: Upload Artifacts
-      uses: actions/upload-artifacts@v4
+      uses: actions/upload-artifact@v4
       with:
        path: ${{ github.workspace }}/*
      
