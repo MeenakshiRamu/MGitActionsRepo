@@ -23,6 +23,8 @@ jobs:
         distribution: 'temurin'
     - name: Run Java file
       run: java Add.java
+    - name: Print 
+      run: echo "Java file ran successfully"
     - name: upload-artifact
       uses: actions/upload-artifact@v4
       with:
