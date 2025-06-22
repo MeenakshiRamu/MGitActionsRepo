@@ -1,0 +1,17 @@
+name: Passing Values
+
+on:
+ push:
+  branches: [main]
+
+jobs:
+ Get-color-input-and-pass-to-nextstep:
+   runs-on: ubuntu-latest
+   steps:
+    - name: set color
+      id: color-selector
+      run: echo "SELECTED_COLOR=Green" >> $GITHUB_OUTPUT
+    - name: Print color in output
+      run: echo "The select color is ${{ steps.color-selector.outputs.SELECTED_COLOR }}"
+      
+      
