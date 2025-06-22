@@ -36,7 +36,7 @@ jobs:
      environment: Dev
      steps:
       - name: upload-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
            name: ArtifactNameDownloaded
 
@@ -46,6 +46,6 @@ jobs:
      environment: UAT
      steps:
       - name: upload-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
            name: ArtifactNameDownloadUAT
