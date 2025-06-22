@@ -23,23 +23,27 @@ jobs:
         distribution: 'temurin'
     - name: Run Java file
       run: java Add.java
+    - name: upload-artifact
+      uses: actions/upload-artifact@v4
+      with:
+           name: ArtifactName
+           path: ${{ github.workplace }}/*  
   DeployToDev:
      runs-on: windows-latest
      needs: build
      environment: Dev
      steps:
       - name: upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/download-artifact@v4
         with:
-           name: ArtifactName
-           path: ${{ github.workplace }}/*
+           name: ArtifactNameDownloaded
+
   DeployToUAT:
      runs-on: windows-latest
      needs: DeployToDev
      environment: UAT
      steps:
       - name: upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/download-artifact@v4
         with:
-           name: ArtifactName
-           path: ${{ github.workplace }}/*        
+           name: ArtifactNameDownloadUAT
